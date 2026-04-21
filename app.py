@@ -118,7 +118,7 @@ with foot_col1:
     st.link_button("💼 Hire me on Upwork", "https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share", use_container_width=True)
 
 with foot_col2:
-    st.link_button("🔗 Connect on LinkedIn", "https://www.linkedin.com/in/syed-m-ali-faraz-827458267", use_container_width=True)
+    st.link_button("🔗 Connect on LinkedIn", "https://www.linkedin.com/in/syed-m-ali-faraz", use_container_width=True)
 
 with foot_col3:
     st.link_button("📂 View Github Profile", "https://github.com/ali-faraz-py", use_container_width=True)
