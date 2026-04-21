@@ -77,7 +77,7 @@ col1, col2 = st.columns(2, gap="large")
 
 with col1:
     project_card(
-        "Sentify Pro: Aspect AI",
+        "Sentiment Sense: Aspect AI",
         "An advanced NLP pipeline using DistilBERT and Zero-Shot Classification to extract specific aspects (Food, Service, Price) and sentiment from text with high contextual awareness.",
         ["Transformers", "Hugging Face", "PyTorch", "Streamlit"],
         "https://sentiment-sense-ai.streamlit.app/",
