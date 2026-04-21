@@ -77,13 +77,13 @@ col1, col2 = st.columns(2, gap="large")
 
 with col1:
     project_card(
-        "IMDB Sentiment AI",
-        "A Deep Learning application using Bidirectional LSTMs to classify movie reviews based on emotional context. High precision for complex reviews.",
-        ["TensorFlow", "Keras", "LSTM", "Python"],
-        "https://your-imdb-link.streamlit.app",
-        color="#FF4B4B"
+        "Sentify Pro: Aspect AI",
+        "An advanced NLP pipeline using DistilBERT and Zero-Shot Classification to extract specific aspects (Food, Service, Price) and sentiment from text with high contextual awareness.",
+        ["Transformers", "Hugging Face", "PyTorch", "Streamlit"],
+        "https://sentiment-sense-ai.streamlit.app/",
+        color="#00FFAA"
     )
-    
+
     project_card(
         "AetherQuant Finance",
         "A quantitative finance tool for analyzing stock market trends and sentiment through real-time data streaming.",
