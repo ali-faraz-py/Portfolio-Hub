@@ -8,10 +8,11 @@ st.markdown("""
         background-color: #FDFDFD;
     }
     
-    /* This is the magic fix for alignment */
+    /* Pushes the button to the bottom of the column */
     [data-testid="stVerticalBlock"] > div:has(div.project-card) {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: 100%;
     }
 
@@ -21,8 +22,7 @@ st.markdown("""
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         border: 1px solid #EAEAEA;
-        /* Fixed height for the text area */
-        height: 200px; 
+        height: 180px; 
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -34,23 +34,28 @@ st.markdown("""
         border-color: #007BFF;
     }
 
-    /* Ensures the badge area doesn't vary in height */
+    /* Fixed height area for tags so they don't shift the button */
     .badge-container {
-        height: 50px;
-        margin-top: 10px;
+        min-height: 60px;
+        margin-top: 15px;
         display: flex;
         flex-wrap: wrap;
-        gap: 5px;
+        gap: 8px; /* Proper spacing between tags */
+        align-content: flex-start;
     }
 
+    /* Professional Tag Styling */
     .tech-tag {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 600;
-        background-color: #E3F2FD;
-        color: #1976D2;
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 14px;
+        border-radius: 50px; /* Makes them pill-shaped */
+        font-size: 13px;
+        font-weight: 500;
+        background-color: #F0F7FF;
+        color: #007BFF;
+        border: 1px solid #D0E3FF;
+        line-height: 1;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -61,21 +66,18 @@ st.markdown("<p style='text-align: center; color: #666;'>Python Developer | Mach
 st.divider()
 
 def project_card(title, desc, tags, link, color="#007BFF"):
-    # We wrap everything in a container to manage the vertical flow
-    container = st.container()
-    with container:
+    with st.container():
         st.markdown(f"""
             <div class="project-card" style="border-top: 5px solid {color};">
-                <h3 style="color: {color}; margin-top: 0;">{title}</h3>
-                <p style="color: #444; font-size: 15px;">{desc}</p>
+                <h3 style="color: {color}; margin-top: 0; margin-bottom: 10px;">{title}</h3>
+                <p style="color: #444; font-size: 14.5px; line-height: 1.5;">{desc}</p>
             </div>
         """, unsafe_allow_html=True)
         
-        # Tags stay in their own fixed-height zone
-        tag_html = "".join([f'<span class="tech-tag">{t}</span>' for t in tags])
+        # Tags with proper spacing
+        tag_html = "".join([f'<div class="tech-tag">{t}</div>' for t in tags])
         st.markdown(f'<div class="badge-container">{tag_html}</div>', unsafe_allow_html=True)
         
-        # The button will now naturally align because the elements above it are height-constrained
         st.link_button(f"View {title} →", link, use_container_width=True)
 
 col1, col2 = st.columns(2, gap="large")
