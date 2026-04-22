@@ -16,8 +16,13 @@ st.markdown("""
         border-radius: 15px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         border: 1px solid #EAEAEA;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         transition: transform 0.3s ease;
+        /* Fixed height for alignment */
+        height: 250px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .project-card:hover {
         transform: translateY(-5px);
@@ -32,6 +37,12 @@ st.markdown("""
         text-align: center;
     }
     
+    /* Tech Badges Container */
+    .badge-container {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
     /* Tech Badges */
     .tech-tag {
         display: inline-block;
@@ -40,6 +51,7 @@ st.markdown("""
         font-size: 12px;
         font-weight: 600;
         margin-right: 5px;
+        margin-bottom: 5px;
         background-color: #E3F2FD;
         color: #1976D2;
     }
@@ -48,6 +60,7 @@ st.markdown("""
 
 st.markdown("<h1 class='main-title'>Software Solutions Portfolio</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; color: #666;'>Python Developer | Machine Learning Engineer | Data Scientist</p>", unsafe_allow_html=True)
+
 st.markdown("""
     <div style="text-align: center; padding: 20px; background-color: #f9f9f9; border-radius: 10px; margin: 20px 0;">
         <h3 style="margin-top: 0;">🚀 Bridging Mathematics & Code</h3>
@@ -63,13 +76,13 @@ def project_card(title, desc, tags, link, color="#007BFF"):
     with st.container():
         st.markdown(f"""
             <div class="project-card" style="border-top: 5px solid {color};">
-                <h3 style="color: {color};">{title}</h3>
-                <p style="color: #444; font-size: 15px;">{desc}</p>
+                <h3 style="color: {color}; margin-bottom: 10px;">{title}</h3>
+                <p style="color: #444; font-size: 15px; line-height: 1.4;">{desc}</p>
             </div>
         """, unsafe_allow_html=True)
         
         tag_html = "".join([f'<span class="tech-tag">{t}</span>' for t in tags])
-        st.markdown(tag_html, unsafe_allow_html=True)
+        st.markdown(f'<div class="badge-container">{tag_html}</div>', unsafe_allow_html=True)
         
         st.link_button(f"View {title} →", link, use_container_width=True)
 
