@@ -99,7 +99,7 @@ with col2:
     project_card(
         "Neural Lens: Vision AI",
         "A high-performance image recognition engine leveraging the ResNet50 architecture to identify over 1,000 object categories with probabilistic precision.",
-        ["TensorFlow", "Keras", "OpenCV", "Streamlit"],
+        ["TensorFlow", "Keras", "ResNet50", "Streamlit", "Image Classification"],
         "https://neural-lens.streamlit.app/",
         color="#FF4B4B"
     )
