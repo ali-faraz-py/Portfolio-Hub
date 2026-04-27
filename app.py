@@ -101,19 +101,19 @@ with col1:
 
 with col2:
     project_card(
+        "Neural Lens: Vision AI",
+        "A high-performance image recognition engine leveraging the ResNet50 architecture to identify over 1,000 object categories with probabilistic precision.",
+        ["TensorFlow", "Keras", "OpenCV", "Streamlit"],
+        "https://neural-lens.streamlit.app/",
+        color="#FF4B4B"
+    )
+    
+    project_card(
         "Diabetes Diagnostic Tool",
         "A medical diagnostic interface utilizing Random Forest classification to predict health risks from clinical metrics.",
         ["Scikit-Learn", "Streamlit", "Joblib"],
         "https://diabetes-risk-diagnostic.streamlit.app/",
         color="#00D26A"
-    )
-    
-    project_card(
-        "Real-Time Currency Converter",
-        "A financial utility that fetches live exchange rates from external APIs to perform high-precision currency conversions.",
-        ["Requests", "API Integration", "Python"],
-        "https://github.com/ali-faraz-py/Python-CurrencyConverter",
-        color="#8E44AD"
     )
 
 st.divider()
