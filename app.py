@@ -8,7 +8,6 @@ st.markdown("""
         background-color: #FDFDFD;
     }
     
-    /* Pushes the button to the bottom of the column */
     [data-testid="stVerticalBlock"] > div:has(div.project-card) {
         display: flex;
         flex-direction: column;
@@ -34,22 +33,20 @@ st.markdown("""
         border-color: #007BFF;
     }
 
-    /* Fixed height area for tags so they don't shift the button */
     .badge-container {
         min-height: 60px;
         margin-top: 15px;
         display: flex;
         flex-wrap: wrap;
-        gap: 8px; /* Proper spacing between tags */
+        gap: 8px;
         align-content: flex-start;
     }
 
-    /* Professional Tag Styling */
     .tech-tag {
         display: inline-flex;
         align-items: center;
         padding: 5px 14px;
-        border-radius: 50px; /* Makes them pill-shaped */
+        border-radius: 50px;
         font-size: 13px;
         font-weight: 500;
         background-color: #F0F7FF;
@@ -74,7 +71,6 @@ def project_card(title, desc, tags, link, color="#007BFF"):
             </div>
         """, unsafe_allow_html=True)
         
-        # Tags with proper spacing
         tag_html = "".join([f'<div class="tech-tag">{t}</div>' for t in tags])
         st.markdown(f'<div class="badge-container">{tag_html}</div>', unsafe_allow_html=True)
         
