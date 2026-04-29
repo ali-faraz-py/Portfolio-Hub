@@ -102,7 +102,7 @@ with col2:
         ["TensorFlow", "Keras", "ResNet50", "Streamlit", "Image Classification"],
         "https://neural-lens.streamlit.app/",
         color="#FF4B4B"
-    )
+    ) 
     
     project_card(
         "Diabetes Diagnostic Tool",
