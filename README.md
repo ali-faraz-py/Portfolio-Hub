@@ -3,7 +3,7 @@
 A professional portfolio dashboard built with **Streamlit** showcasing Machine Learning and Data Science projects.
 
 ## 🚀 Live Demo
-**[View Portfolio](https://your-portfolio-link.streamlit.app/)**
+**[View Portfolio](https://ali-faraz-ml.streamlit.app/)**
 
 ---
 
