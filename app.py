@@ -5,7 +5,8 @@ st.set_page_config(page_title="Portfolio Hub", page_icon="🌐", layout="wide")
 st.markdown("""
     <style>
     .stApp {
-        background-color: #FDFDFD;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background-attachment: fixed;
     }
     
     [data-testid="stVerticalBlock"] > div:has(div.project-card) {
@@ -16,11 +17,13 @@ st.markdown("""
     }
 
     .project-card {
-        background-color: #FFFFFF;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         padding: 25px;
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        border: 1px solid #EAEAEA;
         height: 180px; 
         overflow: hidden;
         display: flex;
@@ -30,7 +33,8 @@ st.markdown("""
 
     .project-card:hover {
         transform: translateY(-5px);
-        border-color: #007BFF;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
     }
 
     .badge-container {
@@ -49,10 +53,32 @@ st.markdown("""
         border-radius: 50px;
         font-size: 13px;
         font-weight: 500;
-        background-color: #F0F7FF;
-        color: #007BFF;
-        border: 1px solid #D0E3FF;
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
         line-height: 1;
+    }
+
+    h1, h3, p {
+        color: #ffffff;
+    }
+
+    .stDivider {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .stLinkButton button {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        color: #ffffff;
+        border-radius: 10px;
+        transition: background 0.3s ease;
+    }
+
+    .stLinkButton button:hover {
+        background: rgba(255, 255, 255, 0.2);
     }
     </style>
     """, unsafe_allow_html=True)
