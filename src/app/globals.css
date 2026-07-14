@@ -1,10 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F6F3;
+  --color-ink: #14181C;
+  --color-slate: #6E7379;
+  --color-hairline: #DEDBD3;
+  --color-signal: #2955D6;
+  --color-live: #1F9D55;
+}
 
 body {
-  background-color: #F7F6F3;
-  color: #14181C;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
 .font-display {
@@ -17,6 +24,14 @@ body {
 
 .font-body {
   font-family: var(--font-body);
+}
+
+.bg-grid-texture {
+  background-image:
+    linear-gradient(rgba(20, 24, 28, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 24, 28, 0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
 }
 
 @keyframes livePulse {
