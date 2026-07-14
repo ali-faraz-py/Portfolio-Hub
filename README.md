@@ -1,140 +1,36 @@
-# 🌐 Portfolio Hub - Ali Faraz
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-A professional portfolio dashboard built with **Streamlit** showcasing Machine Learning and Data Science projects.
+## Getting Started
 
-## 🚀 Live Demo
-**[View Portfolio](https://ali-faraz-ml.streamlit.app/)**
+First, run the development server:
 
----
-
-## 📋 Featured Projects
-
-### 1. **Sentiment Sense: Aspect AI** 💬
-Advanced NLP pipeline using DistilBERT transformer for sentiment analysis with aspect extraction. Identifies specific aspects (Food, Service, Price) from customer reviews.
-
-**Tech Stack:** Transformers, Hugging Face, PyTorch, Streamlit  
-**[View Project →](https://sentiment-sense-ai.streamlit.app/)**
-
----
-
-### 2. **AetherQuant Finance** 📈
-Quantitative finance tool for analyzing stock market trends and real-time sentiment analysis. Provides data-driven insights for investment decisions.
-
-**Tech Stack:** Pandas, NumPy, Plotly, Streamlit  
-**[View Project →](https://aether-quant.streamlit.app/)**
-
----
-
-### 3. **Neural Lens: Vision AI** 🔍
-High-performance image recognition engine using ResNet50 deep learning. Identifies 1000+ object categories with 92%+ accuracy.
-
-**Tech Stack:** TensorFlow, Keras, ResNet50, Streamlit  
-**[View Project →](https://neural-lens.streamlit.app/)**
-
----
-
-### 4. **Diabetes Diagnostic Tool** 🏥
-Medical diagnostic interface using Random Forest classification to predict health risks from clinical metrics.
-
-**Tech Stack:** Scikit-Learn, Streamlit, Joblib  
-**[View Project →](https://diabetes-risk-diagnostic.streamlit.app/)**
-
----
-
-## 💻 Tech Stack
-
-**Frontend & Deployment:**
-- Streamlit
-- Custom CSS & HTML
-- Responsive Design
-
-**Machine Learning & Data Science:**
-- TensorFlow / Keras
-- PyTorch
-- Scikit-Learn
-- Hugging Face Transformers
-- Pandas / NumPy
-- Plotly
-
-**Deployment:**
-- Streamlit Cloud
-- GitHub
-
----
-
-## 📊 Skills
-
-**Machine Learning:** Deep Learning, NLP, Computer Vision, Classification, Time Series  
-**Data Science:** Data Analysis, Data Visualization, Statistical Modeling  
-**Programming:** Python, API Integration, SQL  
-**Tools:** Jupyter, Git, GitHub, Streamlit, Scikit-Learn  
-
----
-
-## 🎯 Philosophy
-
-> "A good developer knows the math behind the code."
-
-This portfolio reflects my commitment to understanding both **how** to build applications and **why** they work:
-- Mathematical foundations of algorithms
-- Deep learning architecture understanding
-- Data-driven decision making
-- Production-grade code quality
-
----
-
-## 📁 Project Structure
-
-```
-portfolio-hub/
-├── app.py              # Main Streamlit application
-├── requirements.txt    # Dependencies
-└── README.md          # This file
-```
-
----
-
-## 🚀 Getting Started
-
-### Run Locally:
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the app
-streamlit run app.py
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The app will open at `http://localhost:8501`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
----
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-## 🌐 Connect & Collaborate
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- 💼 **Upwork:** [Hire me on Upwork](https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share)
-- 🔗 **LinkedIn:** [Connect on LinkedIn](https://www.linkedin.com/in/syed-m-ali-faraz)
-- 📂 **GitHub:** [View GitHub Profile](https://github.com/ali-faraz-py)
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 📈 Key Achievements
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-✅ Built 4 production-grade ML applications  
-✅ Implemented advanced NLP pipelines with transformers  
-✅ Achieved 98% accuracy in medical predictions  
-✅ Developed image recognition with 1000+ categories  
-✅ Real-time data processing and analysis  
-✅ Clean, documented, deployable code  
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## 📝 Latest Updates
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- ✨ Added PyTorch support
-- 🚀 Launched Cancer Detection Model
-- 📊 Improved portfolio UI/UX
-- 🔄 Updated all project links
-
----
-
-**Made with ❤️ by Ali Faraz** | April 2026
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
