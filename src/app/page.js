@@ -240,7 +240,7 @@ export default function Home() {
     <main className="min-h-screen bg-paper">
       <div className="max-w-5xl mx-auto px-6">
         <div className="pt-9 flex items-center justify-between font-mono text-[12px] font-bold tracking-wide text-slate">
-          <span>SYED_ALI_FARAZ.PORTFOLIO</span>
+          <span>SYED M. ALI FARAZ PORTFOLIO</span>
           <div className="flex gap-6">
             <a
               href="https://github.com/ali-faraz-py"
