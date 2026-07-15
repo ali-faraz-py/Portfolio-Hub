@@ -74,18 +74,94 @@ const PROJECTS = [
 ];
 
 const ACCENT = {
-  vision: "bg-accentVision",
-  generative: "bg-accentGenerative",
-  health: "bg-accentHealth",
-  nlp: "bg-accentNlp",
-  finance: "bg-accentFinance",
+  vision: "#2955D6",
+  generative: "#B23DD9",
+  health: "#1F9D55",
+  nlp: "#C9781A",
+  finance: "#0E7C86",
 };
+
+function NeuralGraphic() {
+  // 3 layers: input (3), hidden (4), output (2)
+  const inputY = [40, 90, 140];
+  const hiddenY = [20, 65, 110, 155];
+  const outputY = [55, 120];
+
+  const inputX = 20;
+  const hiddenX = 110;
+  const outputX = 200;
+
+  const lines = [];
+  inputY.forEach((y1, i) => {
+    hiddenY.forEach((y2, j) => {
+      lines.push(
+        <line
+          key={`ih-${i}-${j}`}
+          x1={inputX}
+          y1={y1}
+          x2={hiddenX}
+          y2={y2}
+          stroke="#DEDBD3"
+          strokeWidth="1"
+        />
+      );
+    });
+  });
+  hiddenY.forEach((y1, i) => {
+    outputY.forEach((y2, j) => {
+      lines.push(
+        <line
+          key={`ho-${i}-${j}`}
+          x1={hiddenX}
+          y1={y1}
+          x2={outputX}
+          y2={y2}
+          stroke="#DEDBD3"
+          strokeWidth="1"
+        />
+      );
+    });
+  });
+
+  return (
+    <svg
+      viewBox="0 0 220 180"
+      className="w-full h-full"
+      aria-hidden="true"
+    >
+      {lines}
+      {inputY.map((y, i) => (
+        <circle key={`i-${i}`} cx={inputX} cy={y} r="5" fill="#14181C" />
+      ))}
+      {hiddenY.map((y, i) => (
+        <circle
+          key={`h-${i}`}
+          cx={hiddenX}
+          cy={y}
+          r="5"
+          fill={i === 1 ? "#2955D6" : "#14181C"}
+          className={i === 1 ? "live-dot" : ""}
+        />
+      ))}
+      {outputY.map((y, i) => (
+        <circle
+          key={`o-${i}`}
+          cx={outputX}
+          cy={y}
+          r="5"
+          fill={i === 0 ? "#1F9D55" : "#14181C"}
+        />
+      ))}
+    </svg>
+  );
+}
 
 function ModelCard({ project }) {
   return (
     <div className="group relative border border-hairline rounded-[6px] bg-[#FFFEFC] pl-7 pr-6 py-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_12px_24px_-8px_rgba(20,24,28,0.12)] hover:border-ink/15 overflow-hidden">
       <span
-        className={`absolute left-0 top-0 bottom-0 w-1 ${ACCENT[project.category]}`}
+        className="absolute left-0 top-0 bottom-0 w-1"
+        style={{ backgroundColor: ACCENT[project.category] }}
       />
 
       <div className="flex items-center justify-between">
@@ -193,21 +269,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="pt-20 pb-16 bg-grid bg-grid" style={{ backgroundPosition: "-1px -1px" }}>
-          <p className="font-mono text-[12px] font-bold tracking-[0.16em] text-signal">
-            MACHINE LEARNING ENGINEER
-          </p>
-          <h1 className="font-display font-bold mt-4 max-w-2xl text-[2.4rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.06] tracking-tight">
-            I build AI systems that ship — not just notebooks that run once.
-          </h1>
-          <p className="font-body mt-5 max-w-xl text-[16px] text-slate leading-relaxed">
-            Six deployed projects spanning computer vision, NLP, and classic
-            ML. Each card below is a spec sheet for a live, working system —
-            launch it directly or read the source.
-          </p>
-          <div className="mt-8 inline-flex items-center gap-2 font-mono text-[12px] text-slate bg-white border border-hairline px-3.5 py-2 rounded-full">
-            <span className="w-1.5 h-1.5 rounded-full bg-live live-dot inline-block" />
-            6 SYSTEMS IN PRODUCTION
+        <div className="pt-20 pb-16 bg-grid-texture flex flex-col md:flex-row items-center gap-8">
+          <div className="flex-1">
+            <p className="font-mono text-[12px] font-bold tracking-[0.16em] text-signal">
+              MACHINE LEARNING ENGINEER
+            </p>
+            <h1 className="font-display font-bold mt-4 max-w-2xl text-[2.4rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.06] tracking-tight">
+              I build AI systems that ship — not just notebooks that run once.
+            </h1>
+            <p className="font-body mt-5 max-w-xl text-[16px] text-slate leading-relaxed">
+              Six deployed projects spanning computer vision, NLP, and classic
+              ML. Each card below is a spec sheet for a live, working system —
+              launch it directly or read the source.
+            </p>
+            <div className="mt-8 inline-flex items-center gap-2 font-mono text-[12px] text-slate bg-white border border-hairline px-3.5 py-2 rounded-full">
+              <span className="w-1.5 h-1.5 rounded-full bg-live live-dot inline-block" />
+              6 SYSTEMS IN PRODUCTION
+            </div>
+          </div>
+
+          <div className="hidden md:block w-[220px] h-[180px] shrink-0 opacity-90">
+            <NeuralGraphic />
           </div>
         </div>
 
