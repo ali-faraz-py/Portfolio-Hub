@@ -300,7 +300,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden md:block w-[220px] h-[180px] shrink-0 opacity-90">
+          <div className="w-[180px] h-[150px] md:w-[220px] md:h-[180px] shrink-0 opacity-90 mx-auto md:mx-0">
             <NeuralGraphic />
           </div>
         </div>
