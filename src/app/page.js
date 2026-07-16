@@ -96,8 +96,10 @@ function NeuralGraphic() {
   const outputX = 200;
 
   const lines = [];
+  let lineIndex = 0;
   inputY.forEach((y1, i) => {
     hiddenY.forEach((y2, j) => {
+      lineIndex++;
       lines.push(
         <line
           key={`ih-${i}-${j}`}
@@ -107,12 +109,15 @@ function NeuralGraphic() {
           y2={y2}
           stroke="#DEDBD3"
           strokeWidth="1"
+          className="signal-line"
+          style={{ animationDelay: `${(lineIndex % 5) * 0.15}s` }}
         />
       );
     });
   });
   hiddenY.forEach((y1, i) => {
     outputY.forEach((y2, j) => {
+      lineIndex++;
       lines.push(
         <line
           key={`ho-${i}-${j}`}
@@ -122,20 +127,26 @@ function NeuralGraphic() {
           y2={y2}
           stroke="#DEDBD3"
           strokeWidth="1"
+          className="signal-line"
+          style={{ animationDelay: `${(lineIndex % 5) * 0.15 + 0.3}s` }}
         />
       );
     });
   });
 
   return (
-    <svg
-      viewBox="0 0 220 180"
-      className="w-full h-full"
-      aria-hidden="true"
-    >
+    <svg viewBox="0 0 220 180" className="w-full h-full" aria-hidden="true">
       {lines}
       {inputY.map((y, i) => (
-        <circle key={`i-${i}`} cx={inputX} cy={y} r="5" fill="#14181C" />
+        <circle
+          key={`i-${i}`}
+          cx={inputX}
+          cy={y}
+          r="5"
+          fill="#14181C"
+          className="pulse-node"
+          style={{ animationDelay: `${i * 0.15}s` }}
+        />
       ))}
       {hiddenY.map((y, i) => (
         <circle
@@ -144,7 +155,8 @@ function NeuralGraphic() {
           cy={y}
           r="5"
           fill={i === 1 ? "#2955D6" : "#14181C"}
-          className={i === 1 ? "live-dot" : ""}
+          className="pulse-node"
+          style={{ animationDelay: `${0.4 + i * 0.15}s` }}
         />
       ))}
       {outputY.map((y, i) => (
@@ -154,6 +166,8 @@ function NeuralGraphic() {
           cy={y}
           r="5"
           fill={i === 0 ? "#1F9D55" : "#14181C"}
+          className="pulse-node"
+          style={{ animationDelay: `${0.9 + i * 0.15}s` }}
         />
       ))}
     </svg>
