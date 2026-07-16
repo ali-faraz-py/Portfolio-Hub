@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const PROJECTS = [
   {
     name: "DEEPFAKE_DETECTOR",
@@ -236,11 +240,19 @@ function ModelCard({ project }) {
 }
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("syedalifaraz52@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <main className="min-h-screen bg-paper">
       <div className="max-w-5xl mx-auto px-6">
         <div className="pt-9 flex items-center justify-between font-mono text-[12px] font-bold tracking-wide text-slate">
-          <span>SYED M. ALI FARAZ PORTFOLIO</span>
+          <span>SYED_ALI_FARAZ.PORTFOLIO</span>
           <div className="flex gap-6">
             <a
               href="https://github.com/ali-faraz-py"
@@ -305,12 +317,12 @@ export default function Home() {
 
         <footer className="border-t border-hairline py-10 text-center">
           <div className="font-mono text-[12px] text-slate space-x-3">
-            <a
-              href="mailto:syedalifaraz52@gmail.com"
-              className="hover:text-ink transition-colors"
+            <button
+              onClick={handleCopyEmail}
+              className="hover:text-ink transition-colors cursor-pointer"
             >
-              EMAIL
-            </a>
+              {copied ? "COPIED ✓" : "EMAIL"}
+            </button>
             <span>·</span>
             <a
               href="https://github.com/ali-faraz-py"
