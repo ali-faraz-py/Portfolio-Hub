@@ -314,7 +314,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-[180px] h-[150px] md:w-[220px] md:h-[180px] shrink-0 opacity-90 mx-auto md:mx-0">
+          <div className="w-[210px] h-[175px] md:w-[280px] md:h-[230px] shrink-0 opacity-90 mx-auto md:mx-0">
             <NeuralGraphic />
           </div>
         </div>
