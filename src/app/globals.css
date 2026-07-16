@@ -44,8 +44,31 @@ body {
   animation: livePulse 2s infinite;
 }
 
+@keyframes signalFlow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.signal-line {
+  stroke-dasharray: 4 8;
+  animation: signalFlow 1.4s linear infinite;
+}
+
+@keyframes nodePulseWave {
+  0%, 100% { opacity: 0.35; r: 4.5; }
+  50% { opacity: 1; r: 6; }
+}
+
+.pulse-node {
+  animation: nodePulseWave 2.4s ease-in-out infinite;
+  transform-origin: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .live-dot {
+  .live-dot,
+  .signal-line,
+  .pulse-node {
     animation: none;
   }
 }
