@@ -107,7 +107,7 @@ function NeuralGraphic() {
           y1={y1}
           x2={hiddenX}
           y2={y2}
-          stroke="#DEDBD3"
+          stroke="#C7C3BA"
           strokeWidth="1"
           className="signal-line"
           style={{ animationDelay: `${(lineIndex % 5) * 0.15}s` }}
@@ -125,7 +125,7 @@ function NeuralGraphic() {
           y1={y1}
           x2={outputX}
           y2={y2}
-          stroke="#DEDBD3"
+          stroke="#C7C3BA"
           strokeWidth="1"
           className="signal-line"
           style={{ animationDelay: `${(lineIndex % 5) * 0.15 + 0.3}s` }}
