@@ -31,12 +31,12 @@ const PROJECTS = [
     name: "NEURAL_LENS",
     category: "vision",
     description:
-      "Real-time image recognition across 1,000+ object categories, built on a ResNet50 backbone.",
+      "Real-time image recognition across 1,000+ object categories, built on a MobileNetV2 backbone.",
     task: "Image Classification",
-    architecture: "ResNet50",
+    architecture: "MobileNetV2",
     dataset: "ImageNet-pretrained",
-    stack: "TensorFlow · Keras · Streamlit",
-    live: "https://neural-lens.streamlit.app/",
+    stack: "TensorFlow · FastAPI · Next.js",
+    live: "https://neural-lens-nine.vercel.app/",
     source: "https://github.com/ali-faraz-py/NeuralLens",
   },
   {
