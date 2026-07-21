@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Syed Ali Faraz — Portfolio Hub
 
-## Getting Started
+A single-page portfolio site showcasing six deployed AI/ML projects, each presented as a "model card" — a spec-sheet-style summary (task, architecture, dataset, stack) rather than a generic project tile.
 
-First, run the development server:
+**Live site:** [portfolio-kbaub2rhq-ali-faraz-pys-projects.vercel.app](https://portfolio-kbaub2rhq-ali-faraz-pys-projects.vercel.app/)
+
+---
+
+## What it is
+
+Every project card links to both a live, working demo and its public source code. The design borrows from real ML documentation conventions (model cards, spec sheets) rather than a typical "portfolio template" look — paper-white background, monospace labels, a small animated neural-network diagram in the hero, and category-coded accent colors (vision, generative, health, NLP, finance).
+
+## Featured Projects
+
+- **Deepfake Detector** — PyTorch, EfficientNet-B0, FastAPI, Next.js
+- **Picassify** — Neural style transfer, PyTorch, VGG19, Streamlit
+- **NeuralLens** — Image classification, MobileNetV2, FastAPI, Next.js
+- **Diabetes Detector** — Random Forest, scikit-learn, Streamlit
+- **SentimentSense** — Aspect-based sentiment analysis, DistilBERT + BART
+- **AetherQuant** — Crypto trend classification, XGBoost
+
+## Tech Stack
+
+- Next.js / React
+- Tailwind CSS (v4)
+- Custom fonts: Space Grotesk, JetBrains Mono, Inter
+- Deployed on Vercel
+
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+portfolio-hub/
+└── src/app/
+    ├── page.js       # All project data + page layout
+    ├── layout.js     # Font setup
+    └── globals.css   # Color theme, animations
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Author
+**Syed M. Ali Faraz** — [GitHub](https://github.com/ali-faraz-py) · [LinkedIn](https://www.linkedin.com/in/syed-m-ali-faraz)
