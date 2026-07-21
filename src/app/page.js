@@ -86,7 +86,6 @@ const ACCENT = {
 };
 
 function NeuralGraphic() {
-  // 3 layers: input (3), hidden (4), output (2)
   const inputY = [40, 90, 140];
   const hiddenY = [20, 65, 110, 155];
   const outputY = [55, 120];
