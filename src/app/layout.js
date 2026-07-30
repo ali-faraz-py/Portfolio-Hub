@@ -21,11 +21,11 @@ const inter = Inter({
 
 export const metadata = {
   metadataBase: new URL("https://portfolio-hub-dusky.vercel.app"),
-  title: "Syed Ali Faraz — Machine Learning Engineer",
+  title: "Syed Ali Faraz - Machine Learning Engineer",
   description:
     "Portfolio of deployed AI/ML projects — computer vision, NLP, and classic ML systems built end-to-end.",
   openGraph: {
-    title: "Syed Ali Faraz — Machine Learning Engineer",
+    title: "Syed Ali Faraz - Machine Learning Engineer",
     description:
       "Portfolio of deployed AI/ML projects — computer vision, NLP, and classic ML systems built end-to-end.",
     url: "https://portfolio-hub-dusky.vercel.app/",
