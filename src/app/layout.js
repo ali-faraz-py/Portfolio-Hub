@@ -23,6 +23,14 @@ export const metadata = {
   title: "Syed Ali Faraz — Machine Learning Engineer",
   description:
     "Portfolio of deployed AI/ML projects — computer vision, NLP, and classic ML systems built end-to-end.",
+  openGraph: {
+    title: "Syed Ali Faraz — Machine Learning Engineer",
+    description:
+      "Portfolio of deployed AI/ML projects — computer vision, NLP, and classic ML systems built end-to-end.",
+    url: "https://portfolio-hub-dusky.vercel.app/",
+    siteName: "Syed Ali Faraz Portfolio",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
