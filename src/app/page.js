@@ -4,6 +4,18 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
+    name: "CODEXQUERY",
+    category: "retrieval",
+    description:
+      "RAG chatbot that answers questions about my own repositories, grounded in the actual code and docs, with citations back to the source file and line range.",
+    task: "Retrieval-Augmented Generation",
+    architecture: "fastembed + Groq (gpt-oss-120b)",
+    dataset: "9 personal repositories (code + docs)",
+    stack: "FastAPI · Next.js · Groq",
+    live: "https://codex-query.vercel.app",
+    source: "https://github.com/ali-faraz-py/CodexQuery",
+  },
+  {
     name: "DEEPFAKE_DETECTOR",
     category: "vision",
     description:
@@ -83,6 +95,7 @@ const ACCENT = {
   health: "#1F9D55",
   nlp: "#C9781A",
   finance: "#0E7C86",
+  retrieval: "#3D4A6B",
 };
 
 function NeuralGraphic() {
@@ -231,7 +244,7 @@ function ModelCard({ project }) {
       </div>
 
       <div className="mt-5.5 flex gap-2">
-        <a
+        
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
@@ -239,7 +252,7 @@ function ModelCard({ project }) {
         >
           LAUNCH ↗
         </a>
-        <a
+        
           href={project.source}
           target="_blank"
           rel="noopener noreferrer"
@@ -267,7 +280,7 @@ export default function Home() {
         <div className="pt-9 flex items-center justify-between font-mono text-[12px] font-bold tracking-wide text-slate">
           <span>SYED_ALI_FARAZ.PORTFOLIO</span>
           <div className="flex gap-6">
-            <a
+            
               href="https://github.com/ali-faraz-py"
               target="_blank"
               rel="noopener noreferrer"
@@ -275,7 +288,7 @@ export default function Home() {
             >
               GITHUB
             </a>
-            <a
+            
               href="https://www.linkedin.com/in/syed-m-ali-faraz"
               target="_blank"
               rel="noopener noreferrer"
@@ -283,7 +296,7 @@ export default function Home() {
             >
               LINKEDIN
             </a>
-            <a
+            
               href="https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share"
               target="_blank"
               rel="noopener noreferrer"
@@ -303,13 +316,13 @@ export default function Home() {
               I train models. Then I make them work for a living.
             </h1>
             <p className="font-body mt-5 max-w-xl text-[16px] text-slate leading-relaxed">
-              Six deployed projects spanning computer vision, NLP, and classic
+              Seven deployed projects spanning computer vision, NLP, retrieval, and classic
               ML. Each card below is a spec sheet for a live, working system —
               launch it directly or read the source.
             </p>
             <div className="mt-8 inline-flex items-center gap-2 font-mono text-[12px] text-slate bg-white border border-hairline px-3.5 py-2 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-live live-dot inline-block" />
-              6 SYSTEMS IN PRODUCTION
+              7 SYSTEMS IN PRODUCTION
             </div>
           </div>
 
@@ -337,7 +350,7 @@ export default function Home() {
               {copied ? "COPIED ✓" : "EMAIL"}
             </button>
             <span>·</span>
-            <a
+            
               href="https://github.com/ali-faraz-py"
               target="_blank"
               rel="noopener noreferrer"
@@ -346,7 +359,7 @@ export default function Home() {
               GITHUB
             </a>
             <span>·</span>
-            <a
+            
               href="https://www.linkedin.com/in/syed-m-ali-faraz"
               target="_blank"
               rel="noopener noreferrer"
@@ -355,7 +368,7 @@ export default function Home() {
               LINKEDIN
             </a>
             <span>·</span>
-            <a
+            
               href="https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share"
               target="_blank"
               rel="noopener noreferrer"
