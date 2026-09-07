@@ -59,8 +59,8 @@ const PROJECTS = [
     task: "Risk Classification",
     architecture: "Random Forest",
     dataset: "Clinical health metrics",
-    stack: "scikit-learn · FastAPI · Next.js",
-    live: "https://diabetes-detector.vercel.app/",
+    stack: "scikit-learn · Streamlit",
+    live: "https://diabetes-risk-diagnostic.streamlit.app/",
     source: "https://github.com/ali-faraz-py/DiabetesDetector",
   },
   {
@@ -253,7 +253,6 @@ function ModelCard({ project }) {
           LAUNCH ↗
         </a>
 
-        
         <a
           href={project.source}
           target="_blank"
@@ -282,7 +281,6 @@ export default function Home() {
         <div className="pt-9 flex items-center justify-between font-mono text-[12px] font-bold tracking-wide text-slate">
           <span>SYED_ALI_FARAZ.PORTFOLIO</span>
           <div className="flex gap-6">
-            
             <a
               href="https://github.com/ali-faraz-py"
               target="_blank"
@@ -291,7 +289,6 @@ export default function Home() {
             >
               GITHUB
             </a>
-            
             <a
               href="https://www.linkedin.com/in/syed-m-ali-faraz"
               target="_blank"
@@ -300,7 +297,6 @@ export default function Home() {
             >
               LINKEDIN
             </a>
-            
             <a
               href="https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share"
               target="_blank"
@@ -355,7 +351,6 @@ export default function Home() {
               {copied ? "COPIED ✓" : "EMAIL"}
             </button>
             <span>·</span>
-            
             <a
               href="https://github.com/ali-faraz-py"
               target="_blank"
@@ -365,7 +360,6 @@ export default function Home() {
               GITHUB
             </a>
             <span>·</span>
-            
             <a
               href="https://www.linkedin.com/in/syed-m-ali-faraz"
               target="_blank"
@@ -375,7 +369,6 @@ export default function Home() {
               LINKEDIN
             </a>
             <span>·</span>
-            
             <a
               href="https://www.upwork.com/freelancers/~017cd21f872163dffa?mp_source=share"
               target="_blank"
