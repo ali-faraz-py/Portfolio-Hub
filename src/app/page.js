@@ -59,8 +59,8 @@ const PROJECTS = [
     task: "Risk Classification",
     architecture: "Random Forest",
     dataset: "Clinical health metrics",
-    stack: "scikit-learn · Streamlit",
-    live: "https://diabetes-risk-diagnostic.streamlit.app/",
+    stack: "scikit-learn · FastAPI · Next.js",
+    live: "https://diabetes-detector.vercel.app/",
     source: "https://github.com/ali-faraz-py/DiabetesDetector",
   },
   {
