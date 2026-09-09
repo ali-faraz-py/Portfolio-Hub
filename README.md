@@ -2,7 +2,7 @@
 
 A single-page portfolio site showcasing six deployed AI/ML projects, each presented as a "model card" — a spec-sheet-style summary (task, architecture, dataset, stack) rather than a generic project tile.
 
-**Live site:** [portfolio-kbaub2rhq-ali-faraz-pys-projects.vercel.app](https://portfolio-kbaub2rhq-ali-faraz-pys-projects.vercel.app/)
+**Live site:** [portfolio-hub-dusky.vercel.app/](https://portfolio-hub-dusky.vercel.app/)
 
 ---
 
