@@ -83,8 +83,8 @@ const PROJECTS = [
     task: "Market Trend Classification",
     architecture: "XGBoost",
     dataset: "Yahoo Finance (24 indicators)",
-    stack: "Pandas · Plotly · Streamlit",
-    live: "https://aether-quant.streamlit.app/",
+    stack: "Pandas · FastAPI · Next.js",
+    live: "https://aether-quant-blush.vercel.app/",
     source: "https://github.com/ali-faraz-py/AetherQuant",
   },
 ];
