@@ -330,13 +330,13 @@ export default function Home() {
               I train models. Then I make them work for a living.
             </h1>
             <p className="font-body mt-5 max-w-xl text-[16px] text-slate leading-relaxed">
-              Seven deployed projects spanning computer vision, NLP, retrieval, and classic
-              ML. Each card below is a spec sheet for a live, working system —
+              Eight deployed projects spanning computer vision, NLP, retrieval, classic
+              ML, and MLOps. Each card below is a spec sheet for a live, working system, 
               launch it directly or read the source.
             </p>
             <div className="mt-8 inline-flex items-center gap-2 font-mono text-[12px] text-slate bg-white border border-hairline px-3.5 py-2 rounded-full">
               <span className="w-1.5 h-1.5 rounded-full bg-live live-dot inline-block" />
-              7 SYSTEMS IN PRODUCTION
+              8 SYSTEMS IN PRODUCTION
             </div>
           </div>
 
