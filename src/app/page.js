@@ -4,6 +4,18 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
+  name: "TUNETRACK",
+  category: "mlops",
+  description:
+    "A dashboard tracking LoRA fine-tuning experiments on a small open LLM, logging parameters and results with MLflow across multiple runs, including a documented overfitting finding.",
+  task: "Experiment Tracking",
+  architecture: "LoRA fine-tuned Llama-3.2-3B",
+  dataset: "Custom Q&A pairs (project-derived)",
+  stack: "Unsloth · MLflow · FastAPI · Next.js",
+  live: "https://tunetrack-dashboard.vercel.app",
+  source: "https://github.com/ali-faraz-py/TuneTrack",
+  },
+  {
     name: "CODEXQUERY",
     category: "retrieval",
     description:
@@ -96,6 +108,7 @@ const ACCENT = {
   nlp: "#C9781A",
   finance: "#0E7C86",
   retrieval: "#3D4A6B",
+  mlops: "#A0522D",
 };
 
 function NeuralGraphic() {
