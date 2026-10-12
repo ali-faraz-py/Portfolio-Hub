@@ -60,7 +60,7 @@ body {
   50% { opacity: 1; r: 6; }
 }
 
-.pulse-nodde {
+.pulse-node {
   animation: nodePulseWave 2.4s ease-in-out infinite;
   transform-origin: center;
 }
