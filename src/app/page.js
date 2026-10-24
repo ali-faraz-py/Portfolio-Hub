@@ -327,7 +327,7 @@ export default function Home() {
               MACHINE LEARNING ENGINEER
             </p>
             <h1 className="font-display font-bold mt-4 max-w-2xl text-[2.4rem] sm:text-[3rem] lg:text-[3.5rem] leading-[1.06] tracking-tight">
-              I train models. Then I make them work for a living.
+              I train great models. Then I make them work for a living.
             </h1>
             <p className="font-body mt-5 max-w-xl text-[16px] text-slate leading-relaxed">
               Eight deployed projects spanning computer vision, NLP, retrieval, classic
