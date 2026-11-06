@@ -321,7 +321,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="pt-20 pb-16 bg-grid-texture flex flex-col md:flex-row items-center gap-8">
+        <div className="pt-30 pb-16 bg-grid-texture flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
             <p className="font-mono text-[12px] font-bold tracking-[0.16em] text-signal">
               MACHINE LEARNING ENGINEER
